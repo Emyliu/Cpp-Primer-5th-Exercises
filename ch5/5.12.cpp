@@ -10,12 +10,15 @@ int main() {
     switch(ch) {
       case 'A': case 'a':
         ++aCnt;
+        fPresent = false;
         break;
       case 'E': case 'e':
         ++eCnt;
+        fPresent = false;
         break;
       case 'I':
         ++iCnt;
+        fPresent = false;
         break;
       case 'i':
         ++iCnt;
@@ -26,18 +29,23 @@ int main() {
         break;
       case 'O': case 'o':
         ++oCnt;
+        fPresent = false;
         break;
       case 'U': case 'u':
         ++uCnt;
+        fPresent = false;
         break;
       case ' ':
         ++spaceCnt;
+        fPresent = false;
         break;
       case '\t':
         ++tabCnt;
+        fPresent = false;
         break;
       case '\n':
         ++newlineCnt;
+        fPresent = false;
         break;
       case 'f':
         if (fPresent)
@@ -52,6 +60,7 @@ int main() {
         }
         break;
       default:
+        fPresent = false;
         ++otherCnt;
     }
   }
